@@ -15,22 +15,38 @@
             <img class="logo" src="logo.svg" alt="logo_aula">
         </nav>
 
-        <textarea id="" placeholder="Ingrese el texto aqui"></textarea>
+        <div class="page-container">
 
-        <div class="section-warning mb-16">
-            <img class="logo" src="warning.svg" alt="">
-            <p>Solo letras minúsculas y sin acentos</p>
+            <div class="main-section">
+
+                <textarea id="texto-entrada" placeholder="Ingrese el texto aqui"></textarea>
+
+                <div class="section-warning mb-16">
+                    <img class="logo" src="warning.svg" alt="">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div class="section-buttons mb-64">
+                    <button id="encriptar" class="btn btn-primary mb-24" type="button"
+                        onclick="encriptar()">Encriptar</button>
+                    <button id="desencriptar" class="btn btn-secondary" type="button"
+                        onclick="desencriptar()">Desencriptar</button>
+                </div>
+
+            </div>
+
+            <div class="section-result mb-64">
+                <img id="person" class="d-none" src="person.svg" alt="person">
+                <p id="titulo-salida" class="title mb-16">Ningún mensaje fue encontrado</p>
+                <p id="texto-salida" class="result">Ingresa el texto que desees encriptar o desencriptar.</p>
+
+                <button id="copiar" class="btn btn-secondary mt-16 d-none" type="button"
+                    onclick="copiar()">Copiar</button>
+            </div>
         </div>
-
-        <button class="btn btn-primary mb-24">Encriptar</button>
-        <button class="btn btn-secondary mb-64">Desencriptar</button>
-
-        <div class="section-result mb-64">
-            <p class="title mb-16">Ningún mensaje fue encontrado</p>
-            <p class="result">Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
-
     </div>
+    <script src="index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
